@@ -1,11 +1,17 @@
 #ifndef Point_h
 #define Point_h
+#include "Arduino.h"
+typedef double Radians;
+typedef float Inches;
+typedef long Microseconds;
 
-struct Point {
-  float x;
-  float y;
+class Point {
+public:
+  Inches x, y;
+  Point();
+  Point(Inches, Inches);
+  double calculateDistance(Point);
+  String toString();  
 };
-typedef struct Point Point;
 
 #endif
-
